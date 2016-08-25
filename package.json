@@ -1,7 +1,7 @@
 {
-  "name": "ng2_play",
+  "name": "e-scheduler",
   "version": "1.0.0",
-  "description": "- Blog @ http://www.towfeek.se/2015/07/angularjs-2-overview/\r - Screencast @ https://youtu.be/rd3cLh_wn04",
+  "description": "E-Scheduler application.",
   "scripts": {
     "start": "ng serve",
     "postinstall": "typings install",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ajtowf/ng2_play.git"
+    "url": "git+https://github.com/hardin92/e-scheduler.git"
   },
-  "author": "Ajden Towfeek",
+  "author": "Tamas Kenyhercz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ajtowf/ng2_play/issues"
+    "url": "https://github.com/hardin92/e-scheduler/issues"
   },
-  "homepage": "https://github.com/ajtowf/ng2_play#readme",
+  "homepage": "https://github.com/hardin92/e-scheduler#readme",
   "devDependencies": {
     "@angular/tsc-wrapped": "^0.2.2",
     "angular-cli": "^1.0.0-beta.9",
@@ -58,6 +58,7 @@
     "es6-shim": "^0.35.0",
     "express": "4.13.4",
     "express-jwt": "3.3.0",
+    "ng2-translate": "^2.4.2",
     "reflect-metadata": "0.1.3",
     "rxjs": "5.0.0-beta.6",
     "symbol-observable": "^0.2.4",

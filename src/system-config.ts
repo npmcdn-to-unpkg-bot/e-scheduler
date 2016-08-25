@@ -13,6 +13,10 @@ const map: any = {
 
 /** User packages configuration. */
 const packages: any = {
+  'ng2-translate': { 
+    defaultExtension: 'js', 
+    main: 'ng2-translate.js'
+  },
   'angular2-jwt': {
     defaultExtension: 'js',
     main: 'angular2-jwt.js'

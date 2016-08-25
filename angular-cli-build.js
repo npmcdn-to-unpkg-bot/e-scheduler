@@ -17,6 +17,7 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
       '@angular2-material/**/*.js',
+      'ng2-translate/*.js',
       'angular2-jwt/**/*.js'
     ]
   });
