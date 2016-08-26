@@ -10,11 +10,9 @@ Run the following commands to run the application
     npm -g install typings
 
     // To run the frontend
-    git clone https://github.com/ajtowf/ng2_play.git
-    cd ng2_play
     npm install
     ng serve
 
     // To run the backend
-    cd ng2_play\backend
+    cd \backend
     node app.js
