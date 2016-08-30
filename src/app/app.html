@@ -1,9 +1,10 @@
 <md-toolbar>
-  <i class="material-icons demo-toolbar-icon">menu</i>
-  <span>E-Scheduler</span> &nbsp;
-  <div>
-    <a [routerLink]="['/']">Todo</a> |
-    <a [routerLink]="['/about', 'Hello world']">About</a>
+    <i class="material-icons demo-toolbar-icon">menu</i>
+      <div class="navmenu-title">
+  <a [routerLink]="['/']"><span>E-Scheduler</span></a>
+      </div>
+  <div class="navmenu-links">
+    <a [routerLink]="['/about', 'Hello world']" [routerLinkActive]="['active']">About</a>
   </div>
 
   <span class="demo-fill-remaining"></span>
@@ -12,7 +13,7 @@
     <a *ngIf="isLoggedIn()" [routerLink]="['/profile']">Profile</a>&nbsp;
     <login></login>
     <logout></logout>
-  </div>  
+  </div>
 </md-toolbar>
 
 <div class="container">

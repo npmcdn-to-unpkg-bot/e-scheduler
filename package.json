@@ -50,6 +50,7 @@
     "@angular2-material/checkbox": "2.0.0-alpha.7",
     "@angular2-material/core": "2.0.0-alpha.7",
     "@angular2-material/input": "2.0.0-alpha.7",
+    "@angular2-material/tabs": "2.0.0-alpha.7",
     "@angular2-material/progress-circle": "2.0.0-alpha.7",
     "@angular2-material/toolbar": "2.0.0-alpha.7",
     "angular2-jwt": "^0.1.15",

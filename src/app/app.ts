@@ -3,14 +3,15 @@ import {Location} from '@angular/common';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
 import { LoginComponent } from './login.component';
 import { LogOutComponent } from './logout.component';
-
 import { UserService } from './user.service';
+import { ROUTER_DIRECTIVES } from '@angular/router';
+
 
 @Component({
 	selector: 'app-root',
   templateUrl: './app/app.html',
   styleUrls: ['./app/app.css'],
-  directives: [LoginComponent, LogOutComponent]
+  directives: [ROUTER_DIRECTIVES, LoginComponent, LogOutComponent]
 })
 export class AppComponent {
   constructor(private userService: UserService) {}

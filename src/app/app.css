@@ -15,3 +15,23 @@
   padding: 6px;
   flex: 1 1 auto;
 }
+.navmenu-title{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.navmenu-title a, a:visited{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.navmenu-links a, a:visited{
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid darkgrey;
+}
+.navmenu-links a:hover{
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid red;
+  transition: 1s linear border-bottom;
+}

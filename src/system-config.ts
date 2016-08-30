@@ -55,6 +55,11 @@ const packages: any = {
     main: 'toolbar.js', 
     defaultExtension: 'js', 
     format: 'cjs' 
+  },
+  '@angular2-material/tabs': { 
+    main: 'tabs.js', 
+    defaultExtension: 'js', 
+    format: 'cjs' 
   }
 };
 

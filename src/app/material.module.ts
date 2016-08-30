@@ -7,6 +7,7 @@ import { MdCoreModule } from '@angular2-material/core';
 import { MdInputModule } from '@angular2-material/input';
 import { MdProgressCircleModule } from '@angular2-material/progress-circle';
 import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdTabsModule } from '@angular2-material/tabs';
 
 @NgModule({     
     exports:      [
@@ -16,7 +17,8 @@ import { MdToolbarModule } from '@angular2-material/toolbar';
       MdCoreModule,
       MdInputModule,
       MdProgressCircleModule,
-      MdToolbarModule
+      MdToolbarModule,
+      MdTabsModule
     ]
 })
 export class MaterialModule {
