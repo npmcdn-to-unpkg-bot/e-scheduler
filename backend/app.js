@@ -12,12 +12,6 @@ function generateHexString(length) {
   }
   return ret.substring(0,length);
 }
-var jwtCheck = jwt({
-  secret: new Buffer(auth0Settings.secret, 'base64'),
-  audience: auth0Settings.audience
-});
-
-app.use('/api/quote', jwtCheck);
 
 app.get('/api/quote', function (req, res) {
   var rand = Math.floor(Math.random() * quotes.length);
@@ -28,10 +22,11 @@ app.post('/api/login', function (req, res) {
   console.log("- /api/login POST request -");
   success=true;
   auth_token=generateHexString(10);
+  profile={"picture": "basic", "name": "Hardin"};
   console.log("Response: ");
-  console.log("success "+ success+ ", auth_token: "+ auth_token);
+  console.log("isLoggedIn: "+ success+ ", auth_token: "+ auth_token);
   console.log("----------------------------------------");
-  res.json({"success": success, "auth_token": auth_token});
+  res.json({"success": success, "auth_token": auth_token, "profile": profile});
 });
 
 app.listen(3002, function () {

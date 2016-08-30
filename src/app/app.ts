@@ -10,8 +10,7 @@ import { UserService } from './user.service';
 	selector: 'app-root',
   templateUrl: './app/app.html',
   styleUrls: ['./app/app.css'],
-  directives: [LoginComponent, LogOutComponent],
-  providers: [UserService]
+  directives: [LoginComponent, LogOutComponent]
 })
 export class AppComponent {
   constructor(private userService: UserService) {}

@@ -17,25 +17,27 @@ export class UserService {
 
     return this.http
       .post(
-        'http://localhost:3002/api/login', 
-        JSON.stringify({ email, password }), 
-        { headers }
+      'http://localhost:3002/api/login',
+      JSON.stringify({ email, password }),
+      { headers }
       )
       .map(res => res.json())
       .map((res) => {
-          console.log("response: ");
-          console.log(res);
+        console.log("response: ");
+        console.log(res);
         if (res.success) {
           localStorage.setItem('auth_token', res.auth_token);
+          localStorage.setItem('profile', JSON.stringify(res.profile));
           this.loggedIn = true;
         }
 
         return res.success;
       });
   }
-  
+
   logout() {
     localStorage.removeItem('auth_token');
+    localStorage.removeItem('profile');
     this.loggedIn = false;
   }
 

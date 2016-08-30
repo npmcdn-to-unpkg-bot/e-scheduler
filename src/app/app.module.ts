@@ -22,6 +22,8 @@ import { Todo } from './todo';
 import { About } from './about';
 import { Profile } from './profile';
 
+import { UserService } from './user.service';
+
 if (environment.production) {
   enableProdMode();
 }
@@ -39,6 +41,7 @@ if (environment.production) {
       provide(AuthConfig, { useFactory: () => {
         return new AuthConfig();
       }}),
+      UserService,
       AuthHttp,
       AuthGuard,
       DataService

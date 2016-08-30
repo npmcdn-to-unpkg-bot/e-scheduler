@@ -1,5 +1,5 @@
 import {tokenNotExpired} from 'angular2-jwt';
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import {
   CanActivate,
   ActivatedRouteSnapshot,
@@ -9,11 +9,14 @@ import {
 import { UserService } from './user.service';
 @Injectable()
 export class AuthGuard implements CanActivate {
-
-  constructor(private userService: UserService, private router: Router) {}
+  userService: UserService;
+  constructor(@Inject(UserService) userService: UserService , private router: Router) {
+    this.userService=userService;
+  }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (this.userService.isLoggedIn) {
+    console.log(this.userService.isLoggedIn());
+    if (this.userService.isLoggedIn()) {
       return true;
     }
 

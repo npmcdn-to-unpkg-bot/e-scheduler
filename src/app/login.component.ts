@@ -18,7 +18,8 @@ export class LoginComponent {
       password="23232323";
     this.userService.login(email, password).subscribe((result) => {
       if (result) {
-        this.router.navigate(['']);
+          console.debug(result);
+        this.router.navigate(['profile']);
       }
     });
   }
