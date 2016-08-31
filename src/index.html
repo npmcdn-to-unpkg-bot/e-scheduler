@@ -9,19 +9,16 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-
+  <link href="https://npmcdn.com/@angular2-material/core@latest/style/core.css">
+  <link href="https://npmcdn.com/@angular2-material/core/overlay/overlay.css" rel="stylesheet">
   <link href="main.css" rel="stylesheet">
   <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="//cdn.auth0.com/js/lock-8.1.min.js"></script>
 </head>
 
 <body>
-  <app-root>Loading..
-    <md-content layout-padding>
-      <div layout="row" layout-sm="column" layout-align="space-around">
-        <md-progress-circular md-mode="indeterminate" md-diameter="96"></md-progress-circular>
-      </div>
-    </md-content>
+  <app-root>
+    Loading..
   </app-root>
   {{#each scripts.polyfills}}
   <script src="{{.}}"></script> {{/each}}

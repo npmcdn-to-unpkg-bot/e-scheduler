@@ -9,61 +9,50 @@
 const map: any = {
   '@angular2-material': 'vendor/@angular2-material',
   'angular2-jwt': 'vendor/angular2-jwt',
-  'ng2-translate': 'vendor/ng2-translate'
+  'ng2-translate': 'vendor/ng2-translate',
 };
 
 /** User packages configuration. */
 const packages: any = {
-  'ng2-translate': { 
-    defaultExtension: 'js', 
+  'ng2-translate': {
+    defaultExtension: 'js',
     main: 'ng2-translate.js',
-        format: 'cjs'
+    format: 'cjs'
   },
   'angular2-jwt': {
     defaultExtension: 'js',
     main: 'angular2-jwt.js'
   },
-  '@angular2-material/core': { 
-    defaultExtension: 'js',
-    main: 'core.js'
-  },
-  '@angular2-material/checkbox': { 
-    main: 'checkbox.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  },
-  '@angular2-material/button': { 
-    main: 'button.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  },
-  '@angular2-material/progress-circle': { 
-    main: 'progress-circle.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  },
-  '@angular2-material/card': { 
-    main: 'card.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  },
-  '@angular2-material/input': { 
-    main: 'input.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  },
-  '@angular2-material/toolbar': { 
-    main: 'toolbar.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  },
-  '@angular2-material/tabs': { 
-    main: 'tabs.js', 
-    defaultExtension: 'js', 
-    format: 'cjs' 
-  }
 };
+const materialComponents = [
+  'button',
+  'card',
+  'core',
+  'checkbox',
+  'grid-list',
+  'icon',
+  'input',
+  'list',
+  'menu',
+  'progress-bar',
+  'progress-circle',
+  'radio',
+  'sidenav',
+  'slider',
+  'slide-toggle',
+  'button-toggle',
+  'tabs',
+  'toolbar',
+  'tooltip',
+];
 
+materialComponents.forEach(name => {
+  packages[`@angular2-material/${name}`] = {
+    format: 'cjs',
+    defaultExtension: 'js',
+    main: `${name}.js`,
+  };
+});
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
  * Everything underneath this line is managed by the CLI.
