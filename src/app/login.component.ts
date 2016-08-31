@@ -18,8 +18,7 @@ export class LoginComponent {
       password="23232323";
     this.userService.login(email, password).subscribe((result) => {
       if (result) {
-          console.debug(result);
-        this.router.navigate(['profile']);
+        this.router.navigate(['dashboard']);
       }
     });
   }

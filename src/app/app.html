@@ -1,9 +1,10 @@
 <md-toolbar>
-    <i class="material-icons demo-toolbar-icon">menu</i>
-      <div class="navmenu-title">
-  <a [routerLink]="['/']"><span>E-Scheduler</span></a>
-      </div>
+  <i class="material-icons demo-toolbar-icon">menu</i>
+  <div class="navmenu-title">
+    <a [routerLink]="['/']"><span>E-Scheduler</span></a>
+  </div>
   <div class="navmenu-links">
+    <a *ngIf="isLoggedIn()" [routerLink]="['/dashboard']">Dashboard</a>&nbsp;
     <a [routerLink]="['/about', 'Hello world']" [routerLinkActive]="['active']">About</a>
   </div>
 

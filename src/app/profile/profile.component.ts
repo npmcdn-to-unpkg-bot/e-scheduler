@@ -3,13 +3,11 @@ import { DataService } from '../shared';
 
 @Component({
   selector: 'profile',
-  template: `
-	 <img src="../app/assets/profiles/{{profile.picture}}.jpg" style="width: 80px; height: 80px;" /> <h1>{{profile.name}}</h1>    
-   <h2>Chuck quote of the day</h2>
-   {{quote}}
-	`
+  templateUrl: './app/profile/profile.component.html',
+  styleUrls: ['./app/profile/profile.component.css']
+	
 })
-export class Profile implements OnInit, OnDestroy, AfterContentInit {
+export class ProfileComponent implements OnInit, OnDestroy, AfterContentInit {
   profile: any;
   quote: any;
 

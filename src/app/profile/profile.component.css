@@ -1,0 +1,14 @@
+.md-headline{font-size:24px;font-weight:400;line-height:32px}
+.md-title{font-size:20px;font-weight:500;letter-spacing:.005em}
+.md-subhead{font-size:14px;line-height:24px}
+.md-body-1,.md-subhead{font-weight:400;letter-spacing:.01em}
+.md-media-lg{height:152px;width:152px}
+md-card md-card-content{display:block;padding:16px}
+md-card md-card-content>p:first-child{margin-top:0}
+.card-header-img{
+    width: 32px;
+    height:32px;
+    padding-left:0;
+    padding-right: 15px;
+    padding-top: 5px;
+}

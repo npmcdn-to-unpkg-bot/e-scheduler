@@ -20,7 +20,8 @@ import { MaterialModule } from './material.module'
 
 import { Todo } from './todo';
 import { About } from './about';
-import { Profile } from './profile';
+import { ProfileComponent } from './profile';
+import { DashboardComponent } from './dashboard';
 
 import { UserService } from './user.service';
 
@@ -33,7 +34,8 @@ if (environment.production) {
       AppComponent,
       Todo,
       About,
-      Profile
+      ProfileComponent,
+      DashboardComponent
     ],
     providers: [
       APP_ROUTER_PROVIDER,
