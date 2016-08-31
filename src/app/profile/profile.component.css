@@ -28,3 +28,6 @@ md-sidenav[mode=side] {
   left:0;
   background: grey;
 }
+md-content.main{
+  padding:25px;
+}

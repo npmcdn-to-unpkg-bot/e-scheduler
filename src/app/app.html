@@ -1,29 +1,43 @@
 <md-toolbar>
-  <i class="material-icons demo-toolbar-icon">menu</i>
-  <div class="navmenu-title">
-    <a [routerLink]="['/']"><span>E-Scheduler</span></a>
+  <div class="topnav-left" [routerLink]="['/']">
+    <img src="../app/assets/icons/scheduler_128.png" [style.width.px]="45" [style.height.px]="45" style="margin-top:10px;margin-left:10px;"
+    />
+    <div class="navmenu-title">
+      <span>E-Scheduler</span>
+    </div>
   </div>
   <div class="navmenu-links">
-    <a *ngIf="isLoggedIn()" [routerLink]="['/dashboard']">{{'site.top-navbar.dashboard' | translate}}</a>&nbsp;
-    <a [routerLink]="['/about', 'Hello world']" [routerLinkActive]="['active']">{{'site.top-navbar.about' | translate}}</a>
+    <a *ngIf="isLoggedIn()" [routerLink]="['/dashboard']">{{'site.top-navbar.dashboard' | translate | uppercase}}</a>&nbsp;
+    <a [routerLink]="['/about', 'Hello world']" [routerLinkActive]="['active']">{{'site.top-navbar.about' | translate | uppercase}}</a>
   </div>
 
   <span class="demo-fill-remaining"></span>
 
   <div>
-    <a *ngIf="isLoggedIn()" [routerLink]="['/profile']">{{'site.top-navbar.profile' | translate}}</a>&nbsp;
-    <login></login>
+    <user-card *ngIf="isLoggedIn()" style="height:52px"></user-card>
+        
+  </div>
+  <div>
     <logout></logout>
+    <a *ngIf="isLoggedIn()" [routerLink]="['/profile']">{{'site.top-navbar.profile' | translate}}</a>&nbsp;
   </div>
   <div class="language-select-container">
-    <ul style="list-style-type:none;">
-    <li class="language-item" *ngFor="let lang of translate.getLangs()">
-      <img src="../app/assets/icons/{{lang}}-flag.svg" (click)='setLanguage(lang)' [style.width.px]="20" [style.height.px]="20"/>
-    </li>
+    <ul style="list-style-type:none;padding-left:8px;padding-right:8px;">
+      <li class="language-item" *ngFor="let lang of translate.getLangs()">
+        <img src="../app/assets/icons/{{lang}}-flag.svg" (click)='setLanguage(lang)' [style.width.px]="20" [style.height.px]="20"
+        />
+      </li>
     </ul>
   </div>
 </md-toolbar>
-
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<md-sidenav-layout>
+  <md-sidenav #staticsidenav (open)="mybutton.focus()" [opened]="!isLoggedIn()" mode="side" layout-padding class="sidenav-main">
+    <h2>Main Sider</h2>
+    <br>
+    <login></login>
+    <br><br><button md-raised-button class="md-raised md-primary" #mybutton (click)="staticsidenav.close()">Close</button>
+  </md-sidenav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-layout>

@@ -12,26 +12,60 @@
   flex: 1 1 auto;
 }
 .navmenu-title{
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 5px;
+  display: inline-block;
+  top:20px;
+  position: absolute;
 }
-.navmenu-title a, a:visited{
+.navmenu-title span{
   text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
   color: black;
   font-size: 20px;
+  line-height: 24px;
 }
 .navmenu-links a, a:visited{
   text-decoration: none;
-  color: black;
+  margin-right:15px;
+  color: white;
   border-bottom: 2px solid darkgrey;
 }
 .navmenu-links a:hover{
   text-decoration: none;
-  color: black;
-  border-bottom: 2px solid red;
+  color: white;
+  border-bottom: 2px solid #ff9c00;
   transition: 1s linear border-bottom;
 }
 .language-item{
   display:inline;
   cursor:pointer;
+}
+md-toolbar{
+  background: black;
+  color:white;
+  padding-left:0;
+  padding-right: 0;
+}
+.topnav-left{
+  display: inline-block;
+  padding: 0;
+  margin:0;
+  color:black;
+  background: #ff9c00;
+  min-height:100%;
+  margin-right:15px;
+  width:200px;
+  cursor: pointer
+}
+.language-select-container{
+  margin:0;
+  padding: 0;
+  height: 100%;
+  background: #333333;
+}
+.sidenav-main{
+  background: #666666;
+  width: 200px;
 }

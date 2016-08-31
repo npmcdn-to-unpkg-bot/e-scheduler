@@ -15,7 +15,6 @@ export class ProfileComponent implements OnInit, OnDestroy, AfterContentInit {
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit() called');
     this.profile = JSON.parse(localStorage.getItem('profile'));
     console.log(this.profile);
     this.dataService
@@ -27,10 +26,10 @@ export class ProfileComponent implements OnInit, OnDestroy, AfterContentInit {
   }
 
   ngOnDestroy(): void {
-    console.log('ngOnDestroy() called');
+    //console.log('ngOnDestroy() called');
   }
 
   ngAfterContentInit() {
-    console.log('ngAfterContentInit() called');
+    //console.log('ngAfterContentInit() called');
   }
 }

@@ -1,0 +1,27 @@
+.card-container{
+    padding:3px;
+    background: #666666;
+    border-radius: 0.1em;
+    cursor: pointer;
+    width: 150px;
+    -webkit-filter: brightness(85%);
+    -moz-filter: brightness(85%);
+    height:50px;
+
+}
+.card-container:hover{
+    -webkit-filter: brightness(100%);
+    -moz-filter: brightness(100%);}
+.md-card-image{
+    display: inline-block;
+    width:42px;
+    height:42px;
+    padding:0;
+    margin-top: 3px;
+}
+.md-title{
+    text-align: center;
+    position: absolute;
+    top:20px;
+    width:100px;
+}
