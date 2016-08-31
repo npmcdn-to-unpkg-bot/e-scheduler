@@ -8,21 +8,22 @@
 /** Map relative paths to URLs. */
 const map: any = {
   '@angular2-material': 'vendor/@angular2-material',
-  'angular2-jwt': 'vendor/angular2-jwt'  
+  'angular2-jwt': 'vendor/angular2-jwt',
+  'ng2-translate': 'vendor/ng2-translate'
 };
 
 /** User packages configuration. */
 const packages: any = {
   'ng2-translate': { 
     defaultExtension: 'js', 
-    main: 'ng2-translate.js'
+    main: 'ng2-translate.js',
+        format: 'cjs'
   },
   'angular2-jwt': {
     defaultExtension: 'js',
     main: 'angular2-jwt.js'
   },
   '@angular2-material/core': { 
-    format: 'cjs',
     defaultExtension: 'js',
     main: 'core.js'
   },
@@ -104,7 +105,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
   },
   packages: cliSystemConfigPackages
 });

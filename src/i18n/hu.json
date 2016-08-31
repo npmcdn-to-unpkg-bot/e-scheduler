@@ -1,0 +1,9 @@
+{
+    "site": {
+        "top-navbar": {
+            "dashboard": "Dashboard",
+            "about": "Rólunk",
+            "profile": "Profil"
+        }
+    }
+}

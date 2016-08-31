@@ -14,7 +14,7 @@ import {AuthHttp, AuthConfig} from 'angular2-jwt';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-//import { TranslateModule } from "ng2-translate/ng2-translate";
+import { TranslateModule } from "ng2-translate/ng2-translate";
 
 import { MaterialModule } from './material.module'
 
@@ -52,7 +52,7 @@ if (environment.production) {
       BrowserModule,
       HttpModule, 
       ReactiveFormsModule,
-      //TranslateModule.forRoot(),
+      TranslateModule.forRoot(),
       RouterModule,
       MaterialModule
     ],
