@@ -1,34 +1,36 @@
- <md-sidenav-layout>
- <md-sidenav #sidenav mode="side" class="app-sidenav">
-    Sidenav
-     <md-spinner class="spinner"></md-spinner>
-  </md-sidenav>
-
-<md-card [style.width.px]="300">
-    <md-card-header>
-        <div class="card-header-img">
-            <img src="../app/assets/icons/profile.svg" />
-        </div>
-        <md-card-header-text>
-            <span class="md-title">{{profile.name}}</span><br/>
-            <span class="md-subhead">{{profile.email}}</span>
-        </md-card-header-text>
-    </md-card-header>
-    <img src="../app/assets/profiles/{{profile.picture}}.jpg" class="md-card-image" alt="Washed Out">
-    <md-card-title>
-        <md-card-title-text>
-            <span class="md-headline">Card header</span>
-        </md-card-title-text>
-    </md-card-title>
-    <md-card-content>
-        <p>
-            The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest
-            Greene's musical language: feel it. It's a simple request, as well...
-        </p>
-        <p>
-            {{quote}}
-        </p>
-         <button md-button (click)="sidenav.toggle()">SideNavToggle</button>
-    </md-card-content>
-</md-card>
- </md-sidenav-layout>
+<md-sidenav-layout>
+    <md-sidenav #left (open)="mybutton.focus()" [opened]="true" mode="side" layout-padding>
+        <h2>Left Sidenav.</h2>
+        <br>
+        <button md-raised-button class="md-raised md-primary" #mybutton (click)="left.close()">Close</button>
+    </md-sidenav>
+    <md-content layout-padding>
+        <md-card [style.width.px]="300">
+            <md-card-header>
+                <div class="card-header-img">
+                    <img src="../app/assets/icons/profile.svg" />
+                </div>
+                <md-card-header-text>
+                    <span class="md-title">{{profile.name}}</span><br/>
+                    <span class="md-subhead">{{profile.email}}</span>
+                </md-card-header-text>
+            </md-card-header>
+            <img src="../app/assets/profiles/{{profile.picture}}.jpg" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Card header</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p>
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the two most important words in Ernest
+                    Greene's musical language: feel it. It's a simple request, as well...
+                </p>
+                <p>
+                    {{quote}}
+                </p>
+                <button md-button (click)="left.toggle()">SideNavToggle</button>
+            </md-card-content>
+        </md-card>
+    </md-content>
+</md-sidenav-layout>

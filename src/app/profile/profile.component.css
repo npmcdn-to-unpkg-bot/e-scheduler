@@ -20,3 +20,11 @@ md-sidenav {
   width: 30px;
   display: inline-block;
 }
+md-sidenav-layout{
+  padding:0;
+  margin:0;
+}
+md-sidenav[mode=side] {
+  left:0;
+  background: grey;
+}
