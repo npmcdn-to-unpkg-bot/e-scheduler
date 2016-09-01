@@ -5,6 +5,14 @@
             "about": "Rólunk",
             "profile": "Profil",
             "logout": "Kijelentkezés"
+        },
+        "logout-sidebar": {
+            "login-form": {
+                "title": "Login",
+                "username": "Felh.név",
+                "password": "Jelszó",
+                "submit": "Mehet!"
+            }
         }
     }
 }

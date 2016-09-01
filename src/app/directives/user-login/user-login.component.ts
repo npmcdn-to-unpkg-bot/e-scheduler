@@ -18,12 +18,12 @@ export class UserLoginComponent implements OnInit {
  checkLoggedIn() {
     return this.userService.isLoggedIn();
   }
-  onSubmit(email, password) {
+  onLogin(email, password) {
       email="fantom92@windowslive.com";
       password="23232323";
     this.userService.login(email, password).subscribe((result) => {
       if (result) {
-        this.router.navigate(['']);
+        this.router.navigate(['dashboard']);
       }
     });
   }

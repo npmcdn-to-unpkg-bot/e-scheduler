@@ -5,6 +5,14 @@
             "about": "About",
             "profile": "Profile",
             "logout": "Logout"
+        },
+        "logout-sidebar": {
+            "login-form": {
+                "title": "Login",
+                "username": "Username",
+                "password": "Password",
+                "submit": "LogIn!"
+            }
         }
     }
 }
