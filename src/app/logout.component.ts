@@ -7,8 +7,7 @@ import { UserService } from './user.service';
   selector: 'logout',
   template: `<img src='../app/assets/icons/logout.svg' aria-label='Logout'
    (click)='onLogout()' *ngIf='checkLoggedIn()' 
-   style='margin-left:18px;margin-right:10px;cursor:pointer;width: 32px;height:32px;'  
-   md-tooltip="Log me out!" [tooltip-position]='bottom'>`
+   style='display:block;margin-left:18px;margin-right:10px;cursor:pointer;width: 32px;height:32px;'>`
 })
 export class LogOutComponent {
   constructor(private userService: UserService, private router: Router) { }
