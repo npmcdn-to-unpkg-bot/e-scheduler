@@ -1,23 +1,24 @@
 .card-container{
+    margin: 6px;
     padding:3px;
-    background: #666666;
-    border-radius: 0.1em;
     cursor: pointer;
     width: 150px;
     -webkit-filter: brightness(85%);
     -moz-filter: brightness(85%);
     height:50px;
-
 }
 .card-container:hover{
     -webkit-filter: brightness(100%);
-    -moz-filter: brightness(100%);}
+    -moz-filter: brightness(100%);
+}
 .md-card-image{
     display: inline-block;
     width:42px;
     height:42px;
     padding:0;
     margin-top: 3px;
+    border:1px solid white;
+    border-radius: 0.2em;
 }
 .md-title{
     text-align: center;

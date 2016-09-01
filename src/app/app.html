@@ -14,12 +14,14 @@
   <span class="demo-fill-remaining"></span>
 
   <div>
-    <user-card *ngIf="isLoggedIn()" style="height:52px"></user-card>
-        
+    <user-card class="ripple" *ngIf="isLoggedIn()" [routerLink]="['/profile']"></user-card>
+  </div>
+  <div>
+    <div class="separator" *ngIf="isLoggedIn()"></div>
   </div>
   <div>
     <logout></logout>
-    <a *ngIf="isLoggedIn()" [routerLink]="['/profile']">{{'site.top-navbar.profile' | translate}}</a>&nbsp;
+    <!--<a *ngIf="isLoggedIn()" [routerLink]="['/profile']">{{'site.top-navbar.profile' | translate}}</a>&nbsp;-->
   </div>
   <div class="language-select-container">
     <ul style="list-style-type:none;padding-left:8px;padding-right:8px;">

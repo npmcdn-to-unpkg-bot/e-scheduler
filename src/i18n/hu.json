@@ -3,7 +3,8 @@
         "top-navbar": {
             "dashboard": "Dashboard",
             "about": "Rólunk",
-            "profile": "Profil"
+            "profile": "Profil",
+            "logout": "Kijelentkezés"
         }
     }
 }

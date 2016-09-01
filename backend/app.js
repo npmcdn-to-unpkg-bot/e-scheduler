@@ -22,7 +22,7 @@ app.post('/api/login', function (req, res) {
   console.log("- /api/login POST request -");
   success=true;
   auth_token=generateHexString(10);
-  profile={"picture": "basic", "name": "Hardin", "email": "fantom92@windowslive.com"};
+  profile={"picture": "unknown", "name": "Hardin", "email": "fantom92@windowslive.com"};
   console.log("Response: ");
   console.log("isLoggedIn: "+ success+ ", auth_token: "+ auth_token);
   console.log("----------------------------------------");

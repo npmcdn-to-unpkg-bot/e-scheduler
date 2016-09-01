@@ -69,3 +69,7 @@ md-toolbar{
   background: #666666;
   width: 200px;
 }
+.separator{
+  border-left:2px solid white;
+  height: 30px;
+}
