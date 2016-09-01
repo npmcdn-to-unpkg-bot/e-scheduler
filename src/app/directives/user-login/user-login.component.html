@@ -1,0 +1,20 @@
+
+<div layout="column" class="md-inline-form" *ngIf="!checkLoggedIn()">
+  <form>
+    <table style="width: 100%" cellspacing="5">
+      <tr>
+      <td><md-input required type="text" placeholder="Username" maxLength="10"
+      style="width: 100%" [value]="user.username" #characterCountUserName>
+      <!--<md-hint align="end">{{characterCountUserName.characterCount}} / 10</md-hint>-->
+      </md-input></td>
+      </tr>
+      <tr>
+      <td><md-input required type="password" placeholder="Password"
+      style="width: 100%" [value]="user.password"></md-input></td>
+      </tr>
+      <tr>
+        <td><button md-raised-button class="md-raised md-primary"  (click)="onSubmit()" >LogIn!</button></td>
+      </tr>
+    </table>
+  </form>
+</div>

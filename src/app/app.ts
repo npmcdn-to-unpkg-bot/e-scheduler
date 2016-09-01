@@ -1,18 +1,18 @@
 import {Component, NgZone, AfterViewInit} from '@angular/core';
 import {Location} from '@angular/common';
 import {tokenNotExpired, JwtHelper} from 'angular2-jwt';
-import { LoginComponent } from './login.component';
-import { LogOutComponent } from './logout.component';
-import { UserService } from './user.service';
+import { UserService } from './shared';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 import { UserCardComponent } from './directives/user-card/user-card.component';
+import { UserLogoutComponent } from './directives/user-logout/user-logout.component';
+import { UserLoginComponent } from './directives/user-login/user-login.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app/app.html',
   styleUrls: ['./app/app.css'],
-  directives: [UserCardComponent, ROUTER_DIRECTIVES, LoginComponent, LogOutComponent]
+  directives: [UserLoginComponent, UserLogoutComponent, UserCardComponent, ROUTER_DIRECTIVES]
 })
 export class AppComponent implements AfterViewInit {
   constructor(private userService: UserService, private translate: TranslateService) {

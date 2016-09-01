@@ -1,0 +1,9 @@
+form md-input{
+    
+}
+form {
+    margin: 0 auto;
+    width: 90%;
+    background: white;
+    border: 1px solid #ccc;
+}

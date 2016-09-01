@@ -20,8 +20,7 @@
     <div class="separator" *ngIf="isLoggedIn()"></div>
   </div>
   <div>
-    <logout></logout>
-    <!--<a *ngIf="isLoggedIn()" [routerLink]="['/profile']">{{'site.top-navbar.profile' | translate}}</a>&nbsp;-->
+    <user-logout></user-logout>
   </div>
   <div class="language-select-container">
     <ul style="list-style-type:none;padding-left:8px;padding-right:8px;">
@@ -36,7 +35,7 @@
   <md-sidenav #staticsidenav (open)="mybutton.focus()" [opened]="!isLoggedIn()" mode="side" layout-padding class="sidenav-main">
     <h2>Main Sider</h2>
     <br>
-    <login></login>
+    <user-login></user-login>
     <br><br><button md-raised-button class="md-raised md-primary" #mybutton (click)="staticsidenav.close()">Close</button>
   </md-sidenav>
   <div class="container">

@@ -23,7 +23,7 @@ import { About } from './about';
 import { ProfileComponent } from './profile';
 import { DashboardComponent } from './dashboard';
 
-import { UserService } from './user.service';
+import { UserService } from './shared';
 
 if (environment.production) {
   enableProdMode();
