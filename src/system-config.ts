@@ -29,6 +29,7 @@ const materialComponents = [
   'card',
   'core',
   'checkbox',
+  'dialog',
   'grid-list',
   'icon',
   'input',

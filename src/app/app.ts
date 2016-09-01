@@ -29,6 +29,15 @@ export class AppComponent implements AfterViewInit {
   isLoggedIn() {
     return this.userService.isLoggedIn();
   }
+  status: string = '';
+  
+  customClose(interesting: boolean) {
+    if (interesting) {
+      this.status = 'That article was interesting.';
+    } else {
+      this.status = 'Look for something else.';
+    }
+  }
   ngAfterViewInit() {
     //console.debug('ngAfterViewInit() called');
   }

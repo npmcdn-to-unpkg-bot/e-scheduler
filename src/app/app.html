@@ -23,7 +23,7 @@
     <user-logout></user-logout>
   </div>
   <div class="language-select-container">
-    <ul style="list-style-type:none;padding-left:8px;padding-right:8px;">
+    <ul style="padding-top:15px;height:100%;list-style-type:none;padding-left:8px;padding-right:8px;">
       <li class="language-item" *ngFor="let lang of translate.getLangs()">
         <img src="../app/assets/icons/{{lang}}-flag.svg" (click)='setLanguage(lang)' [style.width.px]="20" [style.height.px]="20"
         />
@@ -36,7 +36,8 @@
     <h2>Main Sider</h2>
     <br>
     <user-login-form></user-login-form>
-    <br><br><button md-raised-button class="md-raised md-primary" #mybutton (click)="staticsidenav.close()">Close</button>
+    <br><br>
+    
   </md-sidenav>
   <div class="container">
     <router-outlet></router-outlet>
