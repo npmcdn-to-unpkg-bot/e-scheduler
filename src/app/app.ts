@@ -6,13 +6,13 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { TranslateService } from 'ng2-translate/ng2-translate';
 import { UserCardComponent } from './directives/user-card/user-card.component';
 import { UserLogoutComponent } from './directives/user-logout/user-logout.component';
-import { UserLoginComponent } from './directives/user-login/user-login.component';
+import { UserLoginFormComponent } from './directives/user-login-form/user-login-form.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app/app.html',
   styleUrls: ['./app/app.css'],
-  directives: [UserLoginComponent, UserLogoutComponent, UserCardComponent, ROUTER_DIRECTIVES]
+  directives: [UserLoginFormComponent, UserLogoutComponent, UserCardComponent, ROUTER_DIRECTIVES]
 })
 export class AppComponent implements AfterViewInit {
   constructor(private userService: UserService, private translate: TranslateService) {

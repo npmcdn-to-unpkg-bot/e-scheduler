@@ -22,8 +22,10 @@ import { Todo } from './todo';
 import { About } from './about';
 import { ProfileComponent } from './profile';
 import { DashboardComponent } from './dashboard';
+import { UserLoginFormComponent } from './directives/user-login-form/user-login-form.component';
 
 import { UserService } from './shared';
+import { FormsModule }   from '@angular/forms';
 
 if (environment.production) {
   enableProdMode();
@@ -35,7 +37,8 @@ if (environment.production) {
       Todo,
       About,
       ProfileComponent,
-      DashboardComponent
+      DashboardComponent,
+      UserLoginFormComponent
     ],
     providers: [
       APP_ROUTER_PROVIDER,
@@ -51,6 +54,7 @@ if (environment.production) {
     imports:      [
       BrowserModule,
       HttpModule, 
+      FormsModule,
       ReactiveFormsModule,
       TranslateModule.forRoot(),
       RouterModule,

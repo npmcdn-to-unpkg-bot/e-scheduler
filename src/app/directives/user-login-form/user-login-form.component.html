@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control" id="username" required
+    [(ngModel)]="user.username" name="username">
+    <div [hidden]="user.username.valid || user.username.pristine" 
+             class="alert alert-danger">
+          Username is required
+        </div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" required
+    [(ngModel)]="user.password" name="password">
+    <div [hidden]="user.password.valid || user.password.pristine" 
+             class="alert alert-danger">
+          Password is required
+        </div>
+  </div>
+  <button type="submit" class="btn btn-default"
+  [disabled]="!loginForm.form.valid"
+  >Submit</button>
+  <br><p>{{user | json}}</p>
+</form>

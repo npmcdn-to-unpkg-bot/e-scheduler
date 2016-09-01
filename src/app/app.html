@@ -35,7 +35,7 @@
   <md-sidenav #staticsidenav (open)="mybutton.focus()" [opened]="!isLoggedIn()" mode="side" layout-padding class="sidenav-main">
     <h2>Main Sider</h2>
     <br>
-    <user-login></user-login>
+    <user-login-form></user-login-form>
     <br><br><button md-raised-button class="md-raised md-primary" #mybutton (click)="staticsidenav.close()">Close</button>
   </md-sidenav>
   <div class="container">

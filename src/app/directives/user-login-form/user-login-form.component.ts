@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import {FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import {Validators} from '@angular/forms';
 
 import { UserService, UserLogin } from '../../shared';
 
 @Component({
-  selector: 'user-login',
-  templateUrl: './app/directives/user-login/user-login.component.html',
-  styleUrls: ['./app/directives/user-login/user-login.component.css']
+  selector: 'user-login-form',
+  templateUrl: './app/directives/user-login-form/user-login-form.component.html',
+  styleUrls: ['./app/directives/user-login-form/user-login-form.component.css']
 })
-export class UserLoginComponent implements OnInit {
+export class UserLoginFormComponent implements OnInit {
   user: UserLogin;
-
+  submitted: boolean;
  constructor(private userService: UserService, private router: Router) {
    this.user=new UserLogin('test', 'lol');
+   this.submitted=false;
  }
 
  checkLoggedIn() {
@@ -27,7 +30,10 @@ export class UserLoginComponent implements OnInit {
       }
     });
   }
-
+  onSubmit(){
+    this.submitted=true;
+    alert("Submitted is "+this.submitted);
+  }
   ngOnInit() {
   }
 
