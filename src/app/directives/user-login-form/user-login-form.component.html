@@ -2,8 +2,8 @@
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" class="form-control" id="username" required
-    [(ngModel)]="user.username" name="username">
-    <div [hidden]="user.username.valid || user.username.pristine" 
+    [(ngModel)]="user.username" name="username" #username="ngModel" >
+    <div [hidden]="username.valid || username.pristine" 
              class="alert alert-danger">
           Username is required
         </div>
@@ -11,8 +11,8 @@
   <div class="form-group">
     <label for="password">Password</label>
     <input type="password" class="form-control" id="password" required
-    [(ngModel)]="user.password" name="password">
-    <div [hidden]="user.password.valid || user.password.pristine" 
+    [(ngModel)]="user.password" name="password" #password="ngModel">
+    <div [hidden]="password.valid || password.pristine" 
              class="alert alert-danger">
           Password is required
         </div>
