@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import {Observable} from 'rxjs/Rx';
-import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs/Observable';
+import './rxjs-operators';
 
 @Injectable()
 export class UserService {
@@ -32,7 +32,8 @@ export class UserService {
         }
 
         return res.success;
-      });
+      })
+      .catch(this.handleError);
   }
 
   logout() {
@@ -43,5 +44,13 @@ export class UserService {
 
   isLoggedIn() {
     return this.loggedIn;
+  }
+
+  private handleError(error: any) {
+    // In a real world app, we might use a remote logging infrastructure
+    // We'd also dig deeper into the error to get a better message
+    console.debug(error);
+    let errMsg = 'server.response.error.connection';
+    return Observable.throw(errMsg);
   }
 }

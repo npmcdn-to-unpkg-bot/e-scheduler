@@ -14,5 +14,12 @@
                 "submit": "Mehet!"
             }
         }
+    },
+    "server": {
+        "response": {
+            "error": {
+                "connection": "Szerver nem elérhető!"
+            }
+        }
     }
 }

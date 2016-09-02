@@ -14,5 +14,12 @@
                 "submit": "LogIn!"
             }
         }
+    },
+    "server": {
+        "response": {
+            "error": {
+                "connection": "Backend server unavailable!"
+            }
+        }
     }
 }
