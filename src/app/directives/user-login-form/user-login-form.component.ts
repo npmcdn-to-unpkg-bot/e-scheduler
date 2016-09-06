@@ -22,16 +22,6 @@ export class UserLoginFormComponent implements OnInit {
   checkLoggedIn() {
     return this.userService.isLoggedIn();
   }
-  onLogin(email, password) {
-    email = "fantom92@windowslive.com";
-    password = "23232323";
-    this.userService.login(email, password).subscribe(
-      (result) => {
-        if (result) {
-          this.router.navigate(['dashboard']);
-        }
-      });
-  }
   onSubmit() {
     this.submitted = true;
     this.errorMessage=null;
@@ -39,8 +29,8 @@ export class UserLoginFormComponent implements OnInit {
     let password = "23232323";
     this.userService.login(email, password).subscribe(
       (result) => {
-        console.debug(result);
-        if (result) {
+        console.log(result);
+        if (result.success) {
           this.router.navigate(['dashboard']);
         }
       },

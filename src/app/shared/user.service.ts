@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import './rxjs-operators';
+import { LoginResponse } from '../shared/interfaces';
 
 @Injectable()
 export class UserService {
@@ -11,7 +12,7 @@ export class UserService {
     this.loggedIn = !!localStorage.getItem('auth_token');
   }
 
-  login(email, password) {
+  login(email, password): Observable<LoginResponse> {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
@@ -21,9 +22,8 @@ export class UserService {
       JSON.stringify({ email, password }),
       { headers }
       )
-      .map(res => res.json())
-      .map((res) => {
-        console.log("response: ");
+      .map((res: Response) => <LoginResponse>res.json())
+      .do((res) => {
         console.log(res);
         if (res.success) {
           localStorage.setItem('auth_token', res.auth_token);
@@ -46,10 +46,10 @@ export class UserService {
     return this.loggedIn;
   }
 
-  private handleError(error: any) {
+  private handleError(error: Response) {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
-    console.debug(error);
+    console.error(error);
     let errMsg = 'server.response.error.connection';
     return Observable.throw(errMsg);
   }

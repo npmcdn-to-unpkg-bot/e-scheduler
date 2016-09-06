@@ -32,7 +32,8 @@
   </div>
 </md-toolbar>
 <md-sidenav-layout>
-  <md-sidenav #staticsidenav (open)="mybutton.focus()" [opened]="!isLoggedIn()" mode="side" layout-padding class="sidenav-main">
+  <!-- (open)="mybutton.focus()" -->
+  <md-sidenav #staticsidenav [opened]="!isLoggedIn()" mode="side" layout-padding class="sidenav-main">
     <h2>Main Sider</h2>
     <br>
     <user-login-form></user-login-form>
