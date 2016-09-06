@@ -1,5 +1,6 @@
 ## E-Scheduler
 
+(Currently on HOLD until more Angular 2 libraries are coming out.)
 
 This repo uses Angular 2 RC5 with Material 2 Alpha 7 and the 3.0 RC1 Router and leverages [Angular CLI](https://github.com/angular/angular-cli).
 
